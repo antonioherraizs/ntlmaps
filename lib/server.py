@@ -26,7 +26,7 @@ class AuthProxyServer:
     #--------------------------------------------------------------
     def __init__(self, config):
         self.config = config
-        self.MyHost = ''
+        self.MyHost = '127.0.0.1'
         self.ListenPort = self.config['GENERAL']['LISTEN_PORT']
         self.sigLock = thread.allocate_lock() # For locking in the sigHandler
         self.monLock = thread.allocate_lock() # For keeping the monitor thread sane
