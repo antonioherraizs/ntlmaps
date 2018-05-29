@@ -72,8 +72,7 @@ def arrange(conf):
     conf['NTLM_AUTH']['NT_PART'] = makeInt(conf['NTLM_AUTH']['NT_PART'], 'NT_PART')
     conf['NTLM_AUTH']['NTLM_TO_BASIC'] = makeInt(conf['NTLM_AUTH']['NTLM_TO_BASIC'], 'NTLM_TO_BASIC')
     if not conf['NTLM_AUTH']['NT_DOMAIN']:
-        print "ERROR: NT DOMAIN must be set."
-        sys.exit(1)
+        print "WARNING: NT DOMAIN is not set."
     if not conf['NTLM_AUTH'].has_key('PASSWORD'):
         conf['NTLM_AUTH']['PASSWORD'] = ''
 
